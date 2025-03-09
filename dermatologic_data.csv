@@ -1,0 +1,6 @@
+date,severity,symptoms,triggers,treatment,notes,condition
+2025-03-07,8,"Pain, Burning, Scaling","Medication, Allergens, Clothing, Cold, Unknown","Topical Steroids, Moisturizer, Antihistamines, Phototherapy, Prescription Cream, Other",asdfasdfasdf,
+2025-03-05,7,"Burning, Redness","Weather, Allergens",Prescription Cream,monkey,
+2025-03-07,5,,,,,Other
+2025-03-07,5,,,,,Acne
+2025-03-08,8,"Scaling, Dryness","Allergens, Weather, Clothing",Cold Compress,Nothing used,Other
