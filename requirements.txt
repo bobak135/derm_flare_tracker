@@ -1,2 +1,2 @@
-Flastk
+Flask
 gunicorn
