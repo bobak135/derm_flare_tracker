@@ -1,5 +1,4 @@
 import streamlit as st
-import streamlit.components.v1 as components
 import pandas as pd
 from datetime import datetime
 from data_manager import load_data, save_data
@@ -9,25 +8,6 @@ st.set_page_config(
     page_icon="🔍",
     layout="wide"
 )
-
-# Inject JavaScript code to change the title
-components.html(
-    """
-    <script>
-    window.onload = function() {
-        const titleElement = window.parent.document.querySelector('.eczokvf1');
-        if (titleElement) {
-            titleElement.textContent = 'Main';
-        }
-    }
-    </script>
-    """
-)
-
-st.sidebar.markdown("# Main")
-st.sidebar.markdown("[Log Entry](1_Log%20Entry)")
-st.sidebar.markdown("[Analytics](2_Analytics)")
-st.sidebar.markdown("[Data Management](3_Data%20Management)")
 
 def main():
     st.title("Dermatologic Condition Tracker")
