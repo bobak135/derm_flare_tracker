@@ -1,4 +1,16 @@
 import streamlit as st
+
+st.markdown(
+    """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+import streamlit as st
 import pandas as pd
 from datetime import datetime
 from data_manager import load_data, save_data
@@ -8,6 +20,12 @@ st.set_page_config(
     page_icon="🔍",
     layout="wide"
 )
+
+st.sidebar.markdown("# Main")  # This will be your "Main" navigation item
+st.sidebar.markdown("[Log Entry](Log%20Entry)")  # Link to "Log Entry" page
+st.sidebar.markdown("[Analytics](Analytics)")  # Link to "Analytics" page
+st.sidebar.markdown("[Data Management](Data Management)") 
+# Add more navigation items as needed
 
 def main():
     st.title("Dermatologic Condition Tracker")
