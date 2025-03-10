@@ -1,5 +1,11 @@
 import streamlit as st
 
+st.set_page_config(
+    page_title="Main",
+    page_icon="🔍",
+    layout="wide"
+)
+
 st.markdown(
     """
     <style>
@@ -15,11 +21,6 @@ import pandas as pd
 from datetime import datetime
 from data_manager import load_data, save_data
 
-st.set_page_config(
-    page_title="Main",
-    page_icon="🔍",
-    layout="wide"
-)
 
 st.sidebar.markdown("# Main")
 st.sidebar.markdown("[Log Entry](1_Log%20Entry)")
