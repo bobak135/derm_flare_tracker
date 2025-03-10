@@ -1,4 +1,8 @@
 import streamlit as st
+import streamlit.components.v1 as components
+import pandas as pd
+from datetime import datetime
+from data_manager import load_data, save_data
 
 st.set_page_config(
     page_title="Main",
@@ -6,21 +10,19 @@ st.set_page_config(
     layout="wide"
 )
 
-st.markdown(
+# Inject JavaScript code to change the title
+components.html(
     """
-    <style>
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-    </style>
-    """,
-    unsafe_allow_html=True,
+    <script>
+    window.onload = function() {
+        const titleElement = window.parent.document.querySelector('.eczokvf1');
+        if (titleElement) {
+            titleElement.textContent = 'Main';
+        }
+    }
+    </script>
+    """
 )
-
-
-import pandas as pd
-from datetime import datetime
-from data_manager import load_data, save_data
-
 
 st.sidebar.markdown("# Main")
 st.sidebar.markdown("[Log Entry](1_Log%20Entry)")
